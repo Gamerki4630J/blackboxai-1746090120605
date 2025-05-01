@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To My Forever Bestie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <style>
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background: #fff0f6;
+      color: #4a4a4a;
+    }
+    h1, h2 {
+      font-family: 'Dancing Script', cursive;
+    }
+    .soft-gradient {
+      background: linear-gradient(135deg, #f9d5e5, #e6d0f8);
+    }
+    .emoji {
+      font-size: 1.2rem;
+    }
+    .hidden-message {
+      display: none;
+      font-style: italic;
+      color: #a855f7;
+      margin-top: 0.5rem;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .show-message {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Welcome Section -->
+  <section class="soft-gradient p-10 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">To My Forever Bestie <span class="emoji">💖</span></h1>
+    <p class="text-xl md:text-2xl mb-6">You're my most trusted person, and you always will be.</p>
+    <div class="max-w-xs mx-auto">
+      <!-- Image Placeholder (pic here) -->
+      <img
+        src="https://www.shutterstock.com/image-vector/vector-card-hand-written-text-260nw-1108061741.jpg"
+        alt="Welcome Image"
+        class="rounded-lg shadow-lg w-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- Why You’re Special -->
+  <section class="p-10 bg-pink-50 md:flex md:items-center md:justify-around">
+    <div class="md:w-1/2 mb-6 md:mb-0">
+      <h2 class="text-3xl font-semibold mb-4">Why You’re Special</h2>
+      <ul class="list-disc list-inside space-y-2 text-lg">
+        <li>You always understand me, even when I’m silent.</li>
+        <li>You’ve stood by me when no one else did.</li>
+      </ul>
+    </div>
+    <div class="md:w-1/2 max-w-sm mx-auto">
+      <!-- Image Placeholder (pic here) -->
+      <img
+        src="https://i.pinimg.com/originals/a8/9e/18/a89e1854cdda2a738008e3465fde22a1.jpg"
+        alt="Why You’re Special Image"
+        class="rounded-lg shadow-lg w-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- Our Memories -->
+  <section class="p-10 bg-lavender-50 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Our Memories</h2>
+    <div class="max-w-md mx-auto">
+      <!-- Image Placeholder (pic here) -->
+      <img
+        src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2025-02/best-friend-quotes-swl-250218-01-19cbdd.jpg"
+        alt="Our Memories Image"
+        class="rounded-lg shadow-lg w-full object-cover"
+      />
+      <p class="mt-2 italic text-purple-700">funny moment</p>
+    </div>
+  </section>
+
+  <!-- My Promise to You -->
+  <section class="p-10 bg-peach-50 md:flex md:items-center md:justify-around">
+    <div class="md:w-1/2 mb-6 md:mb-0">
+      <h2 class="text-3xl font-semibold mb-4">My Promise to You</h2>
+      <p class="text-lg italic text-pink-700">
+        I promise to be there always, through your happiest days and your hardest nights.
+      </p>
+    </div>
+    <div class="md:w-1/2 max-w-sm mx-auto">
+      <!-- Image Placeholder (pic here) -->
+      <img
+        src="https://www.keepinspiring.me/wp-content/uploads/2021/06/promise-not-label-anonymous-best-friend-quote-684x1024.png"
+        alt="My Promise to You Image"
+        class="rounded-lg shadow-lg w-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- Hidden Message Feature -->
+  <section class="p-10 bg-lavender-100 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Hidden Message Feature</h2>
+    <button
+      id="heartBtn"
+      aria-label="Reveal hidden message"
+      class="text-pink-600 text-5xl focus:outline-none transition-transform hover:scale-110"
+    >
+      <i class="fas fa-heart"></i>
+    </button>
+    <p id="hiddenMessage" class="hidden-message">You’re the most precious person in my life.</p>
+    <div class="max-w-xs mx-auto mt-6">
+      <!-- Image Placeholder (pic here) -->
+      <img
+        src="https://images-cdn.ubuy.co.in/638d8103b162f426b31f0712-hidden-message-bracelet-meaningful-gifts.jpg"
+        alt="Hidden Message Image"
+        class="rounded-lg shadow-lg w-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- Thank You Section -->
+  <section class="p-10 bg-pink-50 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Thank You Section</h2>
+    <p class="text-xl mb-6">Thank you for being my constant, my listener, my smile.</p>
+    <div class="max-w-xs mx-auto">
+      <!-- Image Placeholder (pic here) -->
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw8ozujJlMJqVZ31Zqxegh8wIKhyvlL6UiEw&s"
+        alt="Thank You Image"
+        class="rounded-lg shadow-lg w-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple-200 p-6 text-center text-gray-700">
+    <p class="mb-2">Made with <span class="text-red-500">❤️</span> by your forever best friend</p>
+    <p class="italic">“Friends are the family we choose.”</p>
+    <div class="max-w-xs mx-auto mt-4">
+      <!-- Image Placeholder (pic here) -->
+      <img
+        src="https://wallpapers.com/images/hd/baby-uzumaki-and-naruto-kurama-rsnlafqlvv6mqet1.jpg"
+        alt="Footer Image"
+        class="rounded-lg shadow-lg w-full object-cover"
+      />
+    </div>
+  </footer>
+
+  <script>
+    const heartBtn = document.getElementById('heartBtn');
+    const hiddenMessage = document.getElementById('hiddenMessage');
+    heartBtn.addEventListener('click', () => {
+      if (hiddenMessage.classList.contains('show-message')) {
+        hiddenMessage.classList.remove('show-message');
+      } else {
+        hiddenMessage.classList.add('show-message');
+      }
+    });
+  </script>
+</body>
+</html>

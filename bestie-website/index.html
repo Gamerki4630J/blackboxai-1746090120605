@@ -11,10 +11,20 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   />
   <style>
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
     body {
       font-family: 'Poppins', 'Segoe UI', sans-serif;
       background: #fff0f6;
       color: #4a4a4a;
+      position: relative;
+      overflow-x: hidden;
     }
     h1, h2 {
       font-family: 'Dancing Script', cursive;
@@ -36,120 +46,174 @@
       display: block;
       opacity: 1;
     }
+    .floating-heart {
+      position: absolute;
+      font-size: 1.5rem;
+      color: #f9a8d4;
+      animation: floatUpDown 4s ease-in-out infinite;
+      opacity: 0.7;
+      user-select: none;
+      pointer-events: none;
+    }
+    .floating-heart:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+    .floating-heart:nth-child(2) {
+      top: 40%;
+      left: 80%;
+      animation-delay: 1.5s;
+    }
+    .floating-heart:nth-child(3) {
+      top: 70%;
+      left: 30%;
+      animation-delay: 3s;
+    }
+    .floating-heart:nth-child(4) {
+      top: 85%;
+      left: 60%;
+      animation-delay: 2s;
+    }
+    .icon-inline {
+      display: inline-block;
+      color: #f472b6;
+      margin-right: 0.3rem;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+    .icon-inline:hover {
+      transform: scale(1.2);
+      color: #ec4899;
+    }
+    img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 0 15px #f9a8d4aa;
+      border-radius: 0.5rem;
+    }
+    button#heartBtn:hover {
+      color: #ec4899;
+      transform: scale(1.2);
+      transition: transform 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+    section {
+      transition: background-color 0.5s ease;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
+
+  <span class="floating-heart"><i class="fas fa-heart"></i></span>
+  <span class="floating-heart" style="animation-delay: 1.5s;"><i class="fas fa-heart"></i></span>
+  <span class="floating-heart" style="animation-delay: 3s;"><i class="fas fa-heart"></i></span>
+  <span class="floating-heart" style="animation-delay: 2s;"><i class="fas fa-heart"></i></span>
 
   <!-- Welcome Section -->
   <section class="soft-gradient p-10 text-center">
     <h1 class="text-4xl md:text-5xl font-bold mb-4">To My Forever Bestie <span class="emoji">💖</span></h1>
     <p class="text-xl md:text-2xl mb-6">You're my most trusted person, and you always will be.</p>
     <div class="max-w-xs mx-auto">
-      <!-- Image Placeholder (pic here) -->
       <img
         src="https://www.shutterstock.com/image-vector/vector-card-hand-written-text-260nw-1108061741.jpg"
         alt="Welcome Image"
-        class="rounded-lg shadow-lg w-full object-cover"
+        class="rounded-lg shadow-lg mx-auto"
       />
     </div>
   </section>
 
   <!-- Why You’re Special -->
-  <section class="p-10 bg-pink-50 md:flex md:items-center md:justify-around">
+  <section class="p-10 bg-pink-50 md:flex md:items-center md:justify-around md:gap-10">
     <div class="md:w-1/2 mb-6 md:mb-0">
-      <h2 class="text-3xl font-semibold mb-4">Why You’re Special</h2>
-      <ul class="list-disc list-inside space-y-2 text-lg">
+      <h2 class="text-3xl font-bold mb-4">Why You’re Special</h2>
+      <ul class="list-disc list-inside text-lg space-y-2 text-pink-700">
         <li>You always understand me, even when I’m silent.</li>
         <li>You’ve stood by me when no one else did.</li>
       </ul>
     </div>
-    <div class="md:w-1/2 max-w-sm mx-auto">
-      <!-- Image Placeholder (pic here) -->
+    <div class="md:w-1/2">
       <img
         src="https://i.pinimg.com/originals/a8/9e/18/a89e1854cdda2a738008e3465fde22a1.jpg"
         alt="Why You’re Special Image"
-        class="rounded-lg shadow-lg w-full object-cover"
+        class="rounded-lg shadow-lg mx-auto"
       />
     </div>
   </section>
 
   <!-- Our Memories -->
-  <section class="p-10 bg-lavender-50 text-center">
-    <h2 class="text-3xl font-semibold mb-4">Our Memories</h2>
+  <section class="p-10 soft-gradient text-center">
+    <h2 class="text-3xl font-bold mb-4">Our Memories</h2>
     <div class="max-w-md mx-auto">
-      <!-- Image Placeholder (pic here) -->
       <img
         src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2025-02/best-friend-quotes-swl-250218-01-19cbdd.jpg"
         alt="Our Memories Image"
-        class="rounded-lg shadow-lg w-full object-cover"
+        class="rounded-lg shadow-lg mx-auto mb-2"
       />
-      <p class="mt-2 italic text-purple-700">funny moment</p>
+      <p class="italic text-purple-700">funny moment</p>
     </div>
   </section>
 
   <!-- My Promise to You -->
-  <section class="p-10 bg-peach-50 md:flex md:items-center md:justify-around">
+  <section class="p-10 bg-pink-50 md:flex md:items-center md:justify-around md:gap-10">
     <div class="md:w-1/2 mb-6 md:mb-0">
-      <h2 class="text-3xl font-semibold mb-4">My Promise to You</h2>
-      <p class="text-lg italic text-pink-700">
+      <h2 class="text-3xl font-bold mb-4">My Promise to You</h2>
+      <p class="text-lg text-pink-700 italic max-w-md mx-auto">
         I promise to be there always, through your happiest days and your hardest nights.
       </p>
     </div>
-    <div class="md:w-1/2 max-w-sm mx-auto">
-      <!-- Image Placeholder (pic here) -->
+    <div class="md:w-1/2">
       <img
         src="https://www.keepinspiring.me/wp-content/uploads/2021/06/promise-not-label-anonymous-best-friend-quote-684x1024.png"
         alt="My Promise to You Image"
-        class="rounded-lg shadow-lg w-full object-cover"
+        class="rounded-lg shadow-lg mx-auto"
       />
     </div>
   </section>
 
   <!-- Hidden Message Feature -->
-  <section class="p-10 bg-lavender-100 text-center">
-    <h2 class="text-3xl font-semibold mb-4">Hidden Message Feature</h2>
-    <button
-      id="heartBtn"
-      aria-label="Reveal hidden message"
-      class="text-pink-600 text-5xl focus:outline-none transition-transform hover:scale-110"
-    >
+  <section class="p-10 soft-gradient text-center relative">
+    <h2 class="text-3xl font-bold mb-4">Hidden Message Feature</h2>
+    <button id="heartBtn" aria-label="Reveal hidden message" class="text-4xl text-pink-500 focus:outline-none">
       <i class="fas fa-heart"></i>
     </button>
-    <p id="hiddenMessage" class="hidden-message">You’re the most precious person in my life.</p>
+    <p id="hiddenMessage" class="hidden-message max-w-md mx-auto mt-4">
+      You’re the most precious person in my life.
+    </p>
     <div class="max-w-xs mx-auto mt-6">
-      <!-- Image Placeholder (pic here) -->
       <img
         src="https://images-cdn.ubuy.co.in/638d8103b162f426b31f0712-hidden-message-bracelet-meaningful-gifts.jpg"
         alt="Hidden Message Image"
-        class="rounded-lg shadow-lg w-full object-cover"
+        class="rounded-lg shadow-lg mx-auto"
       />
     </div>
   </section>
 
   <!-- Thank You Section -->
   <section class="p-10 bg-pink-50 text-center">
-    <h2 class="text-3xl font-semibold mb-4">Thank You Section</h2>
-    <p class="text-xl mb-6">Thank you for being my constant, my listener, my smile.</p>
-    <div class="max-w-xs mx-auto">
-      <!-- Image Placeholder (pic here) -->
+    <h2 class="text-3xl font-bold mb-4">Thank You</h2>
+    <p class="text-lg text-pink-700 max-w-md mx-auto">
+      Thank you for being my constant, my listener, my smile.
+    </p>
+    <div class="max-w-xs mx-auto mt-6">
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw8ozujJlMJqVZ31Zqxegh8wIKhyvlL6UiEw&s"
         alt="Thank You Image"
-        class="rounded-lg shadow-lg w-full object-cover"
+        class="rounded-lg shadow-lg mx-auto"
       />
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-purple-200 p-6 text-center text-gray-700">
+  <footer class="p-6 bg-pink-100 text-center text-pink-800">
     <p class="mb-2">Made with <span class="text-red-500">❤️</span> by your forever best friend</p>
-    <p class="italic">“Friends are the family we choose.”</p>
-    <div class="max-w-xs mx-auto mt-4">
-      <!-- Image Placeholder (pic here) -->
+    <p class="italic mb-4">“Friends are the family we choose.”</p>
+    <div class="max-w-xs mx-auto">
       <img
         src="https://wallpapers.com/images/hd/baby-uzumaki-and-naruto-kurama-rsnlafqlvv6mqet1.jpg"
         alt="Footer Image"
-        class="rounded-lg shadow-lg w-full object-cover"
+        class="rounded-lg shadow-lg mx-auto"
       />
     </div>
   </footer>
